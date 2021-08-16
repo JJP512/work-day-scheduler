@@ -17,7 +17,7 @@ var loadTasks = function() {
     // if nothing in localStorage, create a new object to track all task status arrays
     if (!tasks) {
       tasks = {
-        nine: ["test"],
+        nine: [],
         ten: [],
         eleven: [],
         twelve: [],
@@ -325,7 +325,7 @@ var updateTasks = function (task, timeSlot) {
     saveTasks();
 }
 
-$("#save").on("click", function () {
+$(".save").on("click", function () {
     console.log("click");
     $.each(tasks, function(list, arr) {
         updateTasks(arr, list);
